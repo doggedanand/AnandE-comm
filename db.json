@@ -20,6 +20,32 @@
     }
   ],
   "products": [
-    
+    {
+      "name": "Redmi Note 11T 5G",
+      "price": "18999",
+      "color": "Blue",
+      "category": "Xiaomi Brand",
+      "description": "This is manufactured by Xiaomi.",
+      "image": "https://www.mobilepriceall.com/wp-content/uploads/2021/11/Xiaomi-Redmi-Note-11T-1024x1024.jpg",
+      "id": 2
+    },
+    {
+      "name": "i phone 14 pro max",
+      "price": "160000",
+      "color": "White",
+      "category": "Apple Brand",
+      "description": "This is manufactured by Apple.",
+      "image": "https://shop.du.ae/medias/sys_master/images/images/h43/h4a/9037764296734/iPhone-14-Pro-Max-Deep-Purple.jpg",
+      "id": 3
+    },
+    {
+      "name": "One Plus 9 Pro",
+      "price": "19999",
+      "color": "Silver",
+      "category": "Phone",
+      "description": "This is Manufactured by Oneplus.",
+      "image": "https://cdn.wccftech.com/wp-content/uploads/2020/06/OnePlus-9-Pro.jpg",
+      "id": 5
+    }
   ]
 }

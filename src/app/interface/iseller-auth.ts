@@ -17,4 +17,5 @@ export interface productListAdd{
     color:string;
     description:string;
     image:string;
+    id:number;
 }

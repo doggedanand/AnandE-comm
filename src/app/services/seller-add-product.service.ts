@@ -10,12 +10,16 @@ export class SellerAddProductService {
   constructor(private http: HttpClient) {
   }
 
-  addProduct(data:productListAdd) {
-    this.http.post('http://localhost:3000/products',data).subscribe((result)=>{
-      console.log(result);
-      
-    })
-
+  addProduct(data: productListAdd) {
+    return this.http.post('http://localhost:3000/products', data);
   }
 
+  productList()
+  {
+    return this.http.get<productListAdd[]>('http://localhost:3000/products');
+  }
+
+  deleteWithId(id:number){
+    return this.http.delete(`http://localhost:3000/products/${id}`);
+  }
 }

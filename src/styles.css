@@ -31,6 +31,9 @@ body{
     border: 1px solid rgb(253, 3, 190);
     cursor: pointer;
 }
-.error-p{
+.error-m{
     color: red;
+}
+.success-m{
+    color: green;
 }

@@ -9,13 +9,24 @@ import { SellerAddProductService } from 'src/app/services/seller-add-product.ser
 })
 export class SellerAddProductComponent implements OnInit {
 
+  addProductMessage: string | undefined;
   constructor(private addProducts: SellerAddProductService) { }
 
   ngOnInit(): void {
   }
-  addProduct(data: productListAdd) {
+  submit(data: productListAdd) {
     console.warn(data);
-    return this.addProducts.addProduct(data)
+    return this.addProducts.addProduct(data).subscribe((result) => {
+      console.warn(result);
+      if (result) {
+        this.addProductMessage = "Product is successfull added";
+      }
+      setTimeout(() => this.addProductMessage = undefined, 3000)
+
+
+
+
+    })
 
   }
 }
