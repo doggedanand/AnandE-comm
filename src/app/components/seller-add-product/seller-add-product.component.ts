@@ -9,13 +9,13 @@ import { SellerAddProductService } from 'src/app/services/seller-add-product.ser
 })
 export class SellerAddProductComponent implements OnInit {
 
-  constructor(private addProducts:SellerAddProductService) { }
+  constructor(private addProducts: SellerAddProductService) { }
 
   ngOnInit(): void {
   }
   addProduct(data: productListAdd) {
     console.warn(data);
-   return this.addProducts.addProduct(data)
+    return this.addProducts.addProduct(data)
 
   }
 }
