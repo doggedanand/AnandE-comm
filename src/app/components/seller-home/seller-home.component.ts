@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { productListAdd } from 'src/app/interface/iseller-auth';
 import { SellerAddProductService } from 'src/app/services/seller-add-product.service';
-
+import { faTrash } from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'app-seller-home',
   templateUrl: './seller-home.component.html',
@@ -10,25 +10,26 @@ import { SellerAddProductService } from 'src/app/services/seller-add-product.ser
 export class SellerHomeComponent implements OnInit {
 
   productListShow: undefined | productListAdd[]
-  productMessage:undefined|string;
+  productMessage: undefined | string;
+  icon=faTrash;
   constructor(private productLists: SellerAddProductService) { }
 
   ngOnInit(): void {
     this.list();
   }
-  deleteProduct(id:number) {
+  deleteProduct(id: number) {
     console.warn("test id", id);
     this.productLists.deleteWithId(id).subscribe((result) => {
-      if(result){
-        this.productMessage="Product is deleted";
+      if (result) {
+        this.productMessage = "Product is deleted";
         this.list();
       }
     })
     setTimeout(() => {
-      this.productMessage=undefined;
+      this.productMessage = undefined;
     }, 3000);
   }
-  list(){
+  list() {
     this.productLists.productList().subscribe((result) => {
       console.log(result);
       this.productListShow = result;

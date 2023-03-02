@@ -21,15 +21,6 @@
   ],
   "products": [
     {
-      "name": "Redmi Note 11T 5G",
-      "price": "18999",
-      "color": "Blue",
-      "category": "Xiaomi Brand",
-      "description": "This is manufactured by Xiaomi.",
-      "image": "https://www.mobilepriceall.com/wp-content/uploads/2021/11/Xiaomi-Redmi-Note-11T-1024x1024.jpg",
-      "id": 2
-    },
-    {
       "name": "i phone 14 pro max",
       "price": "160000",
       "color": "White",
