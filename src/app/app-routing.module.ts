@@ -8,21 +8,11 @@ import { SellerHomeComponent } from './components/seller-home/seller-home.compon
 import { SellerUpdateProductComponent } from './components/seller-update-product/seller-update-product.component';
 
 const routes: Routes = [
-  {
-    path: '', component: HomeComponent
-  },
-  {
-    path: 'seller-auth', component: SellerAuthComponent
-  },
-  {
-    path: 'seller-home', component: SellerHomeComponent, canActivate: [SellerAuthGuard]
-  },
-  {
-    path: 'seller-add-product', component: SellerAddProductComponent, canActivate:[SellerAuthGuard]
-  },
-  {
-    path:'seller-update-product/:id',component:SellerUpdateProductComponent, canActivate:[SellerAuthGuard]
-  }
+  { path: '', component: HomeComponent },
+  { path: 'seller-auth', component: SellerAuthComponent },
+  { path: 'seller-home', component: SellerHomeComponent, canActivate: [SellerAuthGuard] },
+  { path: 'seller-add-product', component: SellerAddProductComponent, canActivate: [SellerAuthGuard] },
+  { path: 'seller-update-product/:id', component: SellerUpdateProductComponent, canActivate: [SellerAuthGuard] }
 
 ];
 
