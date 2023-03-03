@@ -14,12 +14,19 @@ export class SellerAddProductService {
     return this.http.post('http://localhost:3000/products', data);
   }
 
-  productList()
-  {
+  productList() {
     return this.http.get<productListAdd[]>('http://localhost:3000/products');
   }
 
-  deleteWithId(id:number){
+  deleteWithId(id: number) {
     return this.http.delete(`http://localhost:3000/products/${id}`);
+  }
+
+  getProduct(id: string) {
+    return this.http.get<productListAdd>(`http://localhost:3000/products/${id}`);
+  }
+
+  updateProduct(product: productListAdd) {
+    return this.http.put<productListAdd>(`http://localhost:3000/products/${product.id}`, product);
   }
 }

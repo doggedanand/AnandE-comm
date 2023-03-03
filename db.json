@@ -21,9 +21,9 @@
   ],
   "products": [
     {
-      "name": "i phone 14 pro max",
+      "name": "i Phone 14 pro max",
       "price": "160000",
-      "color": "White",
+      "color": "Black",
       "category": "Apple Brand",
       "description": "This is manufactured by Apple.",
       "image": "https://shop.du.ae/medias/sys_master/images/images/h43/h4a/9037764296734/iPhone-14-Pro-Max-Deep-Purple.jpg",
@@ -37,6 +37,33 @@
       "description": "This is Manufactured by Oneplus.",
       "image": "https://cdn.wccftech.com/wp-content/uploads/2020/06/OnePlus-9-Pro.jpg",
       "id": 5
+    },
+    {
+      "name": "Nothing Phone 1",
+      "price": "26999",
+      "color": "Black",
+      "category": "Phone",
+      "description": "This is manufactured by Nothing. (new brand)",
+      "image": "https://fdn.gsmarena.com/imgroot/news/22/08/nothing-phone-1-india-price-hike/popup/-315/gsmarena_001.jpg",
+      "id": 6
+    },
+    {
+      "name": "Dell Inspiron 15 3000",
+      "price": "465000",
+      "color": "Black",
+      "category": "Laptop",
+      "description": "This is manufactured by Dell.",
+      "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6381/6381715_sd.jpg",
+      "id": 7
+    },
+    {
+      "name": "Hp monitor 27 f",
+      "price": "27999",
+      "color": "Silver",
+      "category": "Monitor",
+      "description": "This is manufactured by Hp.",
+      "image": "https://vmart.pk/wp-content/uploads/2019/04/products-27f__5_.jpg",
+      "id": 8
     }
   ]
 }

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { productListAdd } from 'src/app/interface/iseller-auth';
 import { SellerAddProductService } from 'src/app/services/seller-add-product.service';
-import { faTrash } from '@fortawesome/free-solid-svg-icons';
+import { faTrash,faEdit } from '@fortawesome/free-solid-svg-icons';
 @Component({
   selector: 'app-seller-home',
   templateUrl: './seller-home.component.html',
@@ -12,6 +12,7 @@ export class SellerHomeComponent implements OnInit {
   productListShow: undefined | productListAdd[]
   productMessage: undefined | string;
   icon=faTrash;
+  editIcon=faEdit;
   constructor(private productLists: SellerAddProductService) { }
 
   ngOnInit(): void {

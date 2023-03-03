@@ -1,0 +1,13 @@
+<div class="sign-up">
+    <h1>Update Product</h1>
+    <p class="success-m">{{productMessage}}</p>
+    <form #addProduct="ngForm" (ngSubmit)="submit(addProduct.value)" class="common-form">
+        <input type="text" class="form-input" ngModel="{{productData?.name}}" name="name" placeholder="Enter Product Name">
+        <input type="text" class="form-input" ngModel="{{productData?.price}}" name="price" placeholder="Enter Product Price">
+        <input type="text" class="form-input" ngModel="{{productData?.color}}" name="color" placeholder="Enter Product Color">
+        <input type="text" class="form-input" ngModel="{{productData?.category}}" name="category" placeholder="Enter Product Category">
+        <textarea type="text" class="form-input"  ngModel="{{productData?.description}}" name="description" placeholder="Enter Product Description"></textarea>
+        <input type="text" class="form-input" ngModel="{{productData?.image}}" name="image" placeholder="Enter Product Image Url">
+        <button class="form-button">Update Product</button>
+    </form>
+</div>  
