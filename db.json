@@ -43,7 +43,7 @@
       "price": "26999",
       "color": "Black",
       "category": "Phone",
-      "description": "This is manufactured by Nothing. (new brand)",
+      "description": "This is manufactured by Nothing. (New Brand)",
       "image": "https://fdn.gsmarena.com/imgroot/news/22/08/nothing-phone-1-india-price-hike/popup/-315/gsmarena_001.jpg",
       "id": 6
     },
@@ -64,6 +64,42 @@
       "description": "This is manufactured by Hp.",
       "image": "https://vmart.pk/wp-content/uploads/2019/04/products-27f__5_.jpg",
       "id": 8
+    },
+    {
+      "name": "Nike Shoes",
+      "price": "3000",
+      "category": "Shoes",
+      "color": "Black",
+      "description": "Best shoes for Running",
+      "image": "https://static.nike.com/a/images/t_PDP_1280_v1/f_auto,q_auto:eco/1eeaacc0-e07c-4024-a5f7-57f2fd23e8a2/air-max-270-g-golf-shoe-Z6vCfs.png",
+      "id": 4
+    },
+    {
+      "name": "Levies Jeans",
+      "price": "5000",
+      "category": "Jeans",
+      "color": "blue",
+      "description": "Confirmable jeans for man ",
+      "image": "https://www.filmibeat.com/wimg/desktop/2012/12/13548612746596.jpg",
+      "id": 2
+    },
+    {
+      "name": "Truck",
+      "price": "Toy",
+      "category": "Toys",
+      "color": "Red",
+      "description": "A toy for 5 year old child",
+      "image": "https://cdn.shopify.com/s/files/1/0011/8367/8476/products/Truck2_1400x.png?v=1662789388",
+      "id": 1
+    },
+    {
+      "name": "Noise Smart Watch",
+      "price": "2000",
+      "color": "Black",
+      "category": "Watch",
+      "description": "Noise smart watch for man and women both",
+      "image": "https://images-na.ssl-images-amazon.com/images/I/41zs4v3adaL.jpg",
+      "id": 9
     }
   ]
 }

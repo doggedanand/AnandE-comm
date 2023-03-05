@@ -1,10 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
-body{
+body {
     font-family: sans-serif;
     margin-top: 0px;
     margin-left: 0px;
     margin-right: 0px;
     background-color: rgb(232, 231, 231);
+    /* background-color: rgb(251, 208, 208); */
 }
 
 /* .container{
@@ -12,29 +13,44 @@ body{
     margin-right: 5%;
 } */
 
-.common-form{
+.common-form {
     text-align: center;
     display: flex;
     margin: auto;
     flex-direction: column;
     width: 300px;
 }
-.form-input{
+
+.form-input {
     height: 35px;
     margin-bottom: 20px;
     padding-left: 10px;
-    border: 1px solid rgb(253, 3, 190) ;
+    border: 1px solid rgb(253, 3, 190);
     color: rgb(253, 3, 190);
 }
-.form-button{
+
+.form-button {
     height: 35px;
     border: 1px solid rgb(253, 3, 190);
     cursor: pointer;
 }
-.error-m{
+
+.error-m {
     color: red;
 }
-.success-m{
+
+.success-m {
     color: green;
     text-align: center;
+}
+
+.carousel-caption {
+    background-color: #00000082;
+    border-radius: 5px;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    background-color: black;
+    border-radius: 5px;
 }

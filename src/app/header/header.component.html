@@ -1,24 +1,16 @@
 <nav class="nav">
     <h1><a [routerLink]="['/']"><strong>Anand</strong>E-Comm</a></h1>
     <div *ngIf="menuType==='default'" class="nav-search">
-        <input type="text" placeholder="Search here">
+        <input (keyup)="searchProduct($event)" type="text" placeholder="Search here">
         <button>Search</button>
         <!-- <button class="btn btn-primary"></button> -->
     </div>
     <div [ngSwitch]="menuType">
         <ul *ngSwitchCase="'default'">
-            <li>
-                <a [routerLink]="['seller-auth']">Seller</a>
-            </li>
-            <li>
-                <a [routerLink]="['']">Home</a>
-            </li>
-            <li>
-                <a [routerLink]="['']">Login</a>
-            </li>
-            <li>
-                <a [routerLink]="['']">Cart(0)</a>
-            </li>
+            <li> <a [routerLink]="['seller-auth']">Seller</a> </li>
+            <li> <a [routerLink]="['']">Home</a> </li>
+            <li> <a [routerLink]="['']">Login</a> </li>
+            <li> <a [routerLink]="['']">Cart(0)</a> </li>
 
         </ul>
         <!-- seller  -->
@@ -32,16 +24,8 @@
             <li>
                 <a (click)="logout()">Logout</a>
             </li>
-            <li>
-                <a [routerLink]="['']">{{"Hi!" }} {{sellerName | titlecase}}</a>
-            </li>
-
+            <li> <a [routerLink]="['']">{{"Hi!" }} {{sellerName | titlecase}}</a> </li>
         </ul>
     </div>
-
-
-
-
-
     <!-- nav end -->
 </nav>

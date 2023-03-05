@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { productListAdd } from '../interface/iseller-auth';
+import { SellerAddProductService } from '../services/seller-add-product.service';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -7,8 +9,9 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
   menuType: string = 'default';
-  sellerName:string='';
-  constructor(public route: Router) { }
+  sellerName: string = '';
+  searchResult:undefined|productListAdd[];
+  constructor(public route: Router , private product:SellerAddProductService) { }
 
   ngOnInit(): void {
     this.route.events.subscribe((val: any) => {
@@ -16,10 +19,10 @@ export class HeaderComponent implements OnInit {
         if (localStorage.getItem('seller') && val.url.includes('seller')) {
           console.warn("in seller area")
           this.menuType = "seller"
-          if(localStorage.getItem('seller')){
-            let sellerStore =localStorage.getItem('seller');
-            let sellerData= sellerStore && JSON.parse(sellerStore)[0];
-            this.sellerName=sellerData.name;
+          if (localStorage.getItem('seller')) {
+            let sellerStore = localStorage.getItem('seller');
+            let sellerData = sellerStore && JSON.parse(sellerStore)[0];
+            this.sellerName = sellerData.name;
           }
         } else {
           this.menuType = "default"
@@ -28,9 +31,19 @@ export class HeaderComponent implements OnInit {
       }
     })
   }
-  logout(){
+  logout() {
     localStorage.removeItem('seller');
     this.route.navigate(['/'])
   }
-
+  searchProduct(query: KeyboardEvent) {
+    if (query){
+      const element=query.target as HTMLInputElement;
+    this.product.searchProducts(element.value).subscribe((result)=>{
+      console.warn(result);
+      this.searchResult=result;
+      
+    })
+      
+    }
+  }
 }

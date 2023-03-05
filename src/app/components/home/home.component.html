@@ -1,20 +1,41 @@
-<p>home works!</p>
-<!DOCTYPE html>
-<html>
-
-<head>
-  <title>Our Company</title>
-</head>
-
-<body>
-
-  <h1>Welcome to Our Company</h1>
-  <h2>Web Site Main Ingredients:</h2>
-
-  <p>Pages (HTML)</p>
-  <p>Style Sheets (CSS)</p>
-  <p>Computer Code (JavaScript)</p>
-  <p>Live Data (Files and Databases)</p>
-
-</body>
-</html>
+<ngb-carousel *ngIf="popularProducts">
+  <ng-template *ngFor="let item of popularProducts" ngbSlide>
+    <div class="picsum-img-wrapper">
+      <img class="product-header-image" src="{{item.image}}" alt="Random first slide" />
+    </div>
+    <div class="carousel-caption">
+      <h3>{{item.name}}</h3>
+      <p>{{item.description}}</p>
+    </div>
+  </ng-template>
+</ngb-carousel>
+<!--  -->
+<div class="proudct-list-wrapper">
+  <h1><strong>Trendy Products</strong></h1>
+  <div class="row">
+    <div *ngFor="let item of trendyProducts" class="col-sm-3">
+      <div class="product-item">
+        <img
+          src="{{item.image}}"
+          alt="img">     
+      <div class="product-details">
+        <h6 class="name-head">
+          {{item.name}}
+        </h6>
+        <div class="product-price">
+          <h6>Price: {{item.price}}</h6>
+        </div>
+        <div class="product-color">
+          <h6>Color: {{item.color}}</h6>
+        </div>
+      </div>
+      <!-- footer  -->
+      <div class="product-footer">
+        <a href="">View Details</a>
+        <a href="">Add to Cart</a>
+      </div>
+    </div>
+    </div>
+    <!--  -->
+  </div>
+</div>
