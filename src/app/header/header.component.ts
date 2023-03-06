@@ -10,8 +10,8 @@ import { SellerAddProductService } from '../services/seller-add-product.service'
 export class HeaderComponent implements OnInit {
   menuType: string = 'default';
   sellerName: string = '';
-  searchResult:undefined|productListAdd[];
-  constructor(public route: Router , private product:SellerAddProductService) { }
+  searchResult: undefined | productListAdd[];
+  constructor(public route: Router, private product: SellerAddProductService) { }
 
   ngOnInit(): void {
     this.route.events.subscribe((val: any) => {
@@ -36,14 +36,18 @@ export class HeaderComponent implements OnInit {
     this.route.navigate(['/'])
   }
   searchProduct(query: KeyboardEvent) {
-    if (query){
-      const element=query.target as HTMLInputElement;
-    this.product.searchProducts(element.value).subscribe((result)=>{
-      console.warn(result);
-      this.searchResult=result;
-      
-    })
-      
+    if (query) {
+      const element = query.target as HTMLInputElement;
+      this.product.searchProducts(element.value).subscribe((result) => {
+        console.warn(result);
+        if(result.length>5){
+          result.length=5;
+        }
+        this.searchResult = result;
+      })
     }
+  }
+  hideSearch(){
+    this.searchResult=undefined;
   }
 }
