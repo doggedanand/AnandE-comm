@@ -2,8 +2,8 @@
     display: flex;
     /* justify-content: space-evenly;  */
     justify-content: space-evenly;
-    background-color: rgb(216, 215, 215);
-    /* background-color: rgb(252, 175, 175); */
+    /* background-color: rgb(216, 215, 215); */
+    background-color: #f8f9fa;
     width: auto;
     padding-top: 5px;
     padding-bottom: 15px;
