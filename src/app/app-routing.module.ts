@@ -15,7 +15,6 @@ const routes: Routes = [
   { path: 'seller-add-product', component: SellerAddProductComponent, canActivate: [SellerAuthGuard] },
   { path: 'seller-update-product/:id', component: SellerUpdateProductComponent, canActivate: [SellerAuthGuard] },
   { path: 'search/:query', component: SearchComponent }
-
 ];
 
 @NgModule({
