@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { SellerAuthGuard } from './auth-guard/seller-auth.guard';
 import { HomeComponent } from './components/home/home.component';
+import { ProductDetailsComponent } from './components/product-details/product-details.component';
 import { SearchComponent } from './components/search/search.component';
 import { SellerAddProductComponent } from './components/seller-add-product/seller-add-product.component';
 import { SellerAuthComponent } from './components/seller-auth/seller-auth.component';
@@ -14,7 +15,8 @@ const routes: Routes = [
   { path: 'seller-home', component: SellerHomeComponent, canActivate: [SellerAuthGuard] },
   { path: 'seller-add-product', component: SellerAddProductComponent, canActivate: [SellerAuthGuard] },
   { path: 'seller-update-product/:id', component: SellerUpdateProductComponent, canActivate: [SellerAuthGuard] },
-  { path: 'search/:query', component: SearchComponent }
+  { path: 'search/:query', component: SearchComponent },
+  {path:'details/:productId', component:ProductDetailsComponent}
 ];
 
 @NgModule({

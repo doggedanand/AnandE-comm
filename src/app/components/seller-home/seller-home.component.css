@@ -1,6 +1,7 @@
 .product-list {
     text-align: center;
     color: rgb(253, 3, 190);
+    margin-bottom: 30px;
 }
 .center {
     margin-left: auto;
@@ -16,23 +17,20 @@ table{
     text-align: center;
     color: rgb(253, 3, 190);
     border-collapse: collapse;
-    background-color: rgb(255, 255, 255);
-    
-    
-    
+    background-color: rgb(255, 255, 255);  
 }
 
 table td, table th{
     border: 1px solid rgb(18, 17, 18);
     padding: 10px;
     min-height: 160px;
-
 }
 img{
     width: 100px;
     height: 100px;
+    object-fit: contain;
 }
 
 .adjust-update-link{
-    margin-left: 10px;
+    margin-left: 25px;
 }
