@@ -44,7 +44,7 @@
       "color": "Black",
       "category": "Phone",
       "description": "This is manufactured by Nothing. (New Brand)",
-      "image": "https://fdn.gsmarena.com/imgroot/news/22/08/nothing-phone-1-india-price-hike/popup/-315/gsmarena_001.jpg",
+      "image": "https://techarena24.com/wp-content/uploads/2022/06/Nothig-Phone-_1.jpeg.webp",
       "id": 6
     },
     {
@@ -85,9 +85,9 @@
     },
     {
       "name": "Truck",
-      "price": "Toy",
-      "category": "Toys",
+      "price": "999",
       "color": "Red",
+      "category": "Toys",
       "description": "A toy for 5 year old child",
       "image": "https://cdn.shopify.com/s/files/1/0011/8367/8476/products/Truck2_1400x.png?v=1662789388",
       "id": 1
@@ -100,6 +100,77 @@
       "description": "Noise smart watch for man and women both",
       "image": "https://images-na.ssl-images-amazon.com/images/I/41zs4v3adaL.jpg",
       "id": 9
+    },
+    {
+      "name": "Samsung Galaxy Book 3 pro 360",
+      "price": "249999",
+      "color": "Brown",
+      "category": "Laptop",
+      "description": "Laptop for Professionals",
+      "image": "https://m.media-amazon.com/images/I/71H0q2K47AL._SX679_.jpg",
+      "id": 10
+    }
+  ],
+  "users": [
+    {
+      "name": "Anand Vishwakarma",
+      "email": "anand@user.com",
+      "password": "Anand@123",
+      "id": 1
+    },
+    {
+      "name": "Anand Vishwakarma",
+      "email": "anand@user.com",
+      "password": "Anand@123",
+      "id": 2
+    },
+    {
+      "name": "anand@seller.com",
+      "email": "",
+      "password": "Anand@123",
+      "id": 3
+    },
+    {
+      "name": "",
+      "email": "anand@seller.com",
+      "password": "Anand@123",
+      "id": 4
+    },
+    {
+      "name": "",
+      "email": "",
+      "password": "",
+      "id": 5
+    },
+    {
+      "name": "asassa",
+      "email": "anand@seller.com",
+      "password": "Anand@123",
+      "id": 6
+    },
+    {
+      "name": "",
+      "email": "",
+      "password": "",
+      "id": 7
+    },
+    {
+      "name": "",
+      "email": "",
+      "password": "",
+      "id": 8
+    },
+    {
+      "name": "sdf",
+      "email": "anand@seller.com",
+      "password": "Anand@123",
+      "id": 9
+    },
+    {
+      "name": "",
+      "email": "",
+      "password": "",
+      "id": 10
     }
   ]
 }

@@ -1,7 +1,7 @@
 export interface ISellerAuth {
     name: string;
-    password: string;
     email: string;
+    password: string;
 }
 
 export interface sellerLogin {

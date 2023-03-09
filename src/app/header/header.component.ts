@@ -11,25 +11,32 @@ export class HeaderComponent implements OnInit {
   menuType: string = 'default';
   sellerName: string = '';
   searchResult: undefined | productListAdd[];
+  userName: string = "";
   constructor(public route: Router, private product: SellerAddProductService) { }
 
   ngOnInit(): void {
     this.route.events.subscribe((val: any) => {
       if (val.url) {
         if (localStorage.getItem('seller') && val.url.includes('seller')) {
-          console.warn("in seller area")
-          this.menuType = "seller"
-          if (localStorage.getItem('seller')) {
-            let sellerStore = localStorage.getItem('seller');
-            let sellerData = sellerStore && JSON.parse(sellerStore)[0];
-            this.sellerName = sellerData.name;
-          }
-        } else {
-          this.menuType = "default"
-          console.warn("outside seller");
+          // console.warn("in seller area")
+          // if (localStorage.getItem('seller')) {
+          let sellerStore = localStorage.getItem('seller');
+          let sellerData = sellerStore && JSON.parse(sellerStore)[0];
+          this.sellerName = sellerData.name;
+          this.menuType = "seller";
+        } else if (localStorage.getItem('user')) {
+          let userStore = localStorage.getItem('user');
+          let userData = userStore && JSON.parse(userStore);
+          this.userName = userData.name;
+          this.menuType = "user";
         }
+        else {
+          this.menuType = "default"
+          // console.warn("outside seller");
+        }
+        // } 
       }
-    })
+    });
   }
   logout() {
     localStorage.removeItem('seller');
@@ -49,9 +56,12 @@ export class HeaderComponent implements OnInit {
   hideSearch() {
     this.searchResult = undefined;
   }
+  redirectToDetails(id: number) {
+    this.route.navigate(['details/' + id]);
+  }
 
   submitSearch(val: string) {
-    console.log(val);
+    // console.warn(val);
     this.route.navigate([`search/${val}`]);
   }
 }

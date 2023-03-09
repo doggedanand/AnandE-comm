@@ -1,7 +1,7 @@
 .search-item {
     margin: 25px auto;
     width: 800px;
-    border-top: 1px solid red;
+    border-top: 1px solid rgb(253, 3, 190);
     padding: 10px;
 }
 
@@ -13,7 +13,8 @@
 
 .search-item h6 {
     font-size: 24px;
-    color: red;
+    color: rgb(253, 3, 190);
+    /* text-decoration: none; */
 }
 
 .search-item p {
