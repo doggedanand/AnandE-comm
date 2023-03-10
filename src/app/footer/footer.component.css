@@ -5,12 +5,13 @@ ul{
 .footer {
     padding: 10px;
     text-align: center;
-    /* position: fixed; */
+    /* position:fixed; */
     bottom: 0;
     right: 0;
     left: 0;
     /* background-color: rgb(216, 215, 215); */
     background-color: #f8f9fa;
+    
 }
 .footer ul{
     list-style-type: none;

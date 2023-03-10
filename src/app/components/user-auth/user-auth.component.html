@@ -1,9 +1,23 @@
 <div class="user-auth">
-    <h1><strong>User SignUp</strong></h1>
-    <form #userSignUp="ngForm" class="common-form" (ngSubmit)="signUp(userSignUp.value)">
-        <input class="form-input" type="text" name="name" ngModel placeholder="Enter user name">
-        <input class="form-input" type="email" name="email" ngModel placeholder="Enter user email">
-        <input class="form-input" type="password" name="password" ngModel placeholder="Enter user password">
-        <button class="form-button">Sign-Up</button>
-    </form>
+    <div *ngIf="!showLogin" class="user-signup">
+        <h1><strong>User SignUp</strong></h1>
+        <form #userSignUp="ngForm" class="common-form" (ngSubmit)="signUp(userSignUp.value)">
+            <input class="form-input" type="text" name="name" ngModel placeholder="Enter user name">
+            <input class="form-input" type="email" name="email" ngModel placeholder="Enter user email">
+            <input class="form-input" type="password" name="password" ngModel placeholder="Enter user password">
+            <button class="form-button">Sign-Up</button><br>
+            <p>Already have Account? <a class="toogle-link" (click)="openLogin()">Click Here</a></p>
+        </form>
+    </div>
+    <!--  -->
+    <div *ngIf="showLogin" class="user-login">
+        <h1><strong>User Login</strong></h1>
+        <form #userlogin="ngForm" class="common-form" (ngSubmit)="login(userlogin.value)">
+            <!-- <input class="form-input" type="text" name="name" ngModel placeholder="Enter user name"> -->
+            <input class="form-input" type="email" name="email" ngModel placeholder="Enter user email">
+            <input class="form-input" type="password" name="password" ngModel placeholder="Enter user password">
+            <button class="form-button">Login</button><br>
+            <p>Want to Create Account? <a class="toogle-link" (click)="openSignUp()">Click Here</a></p>
+        </form>
+    </div>
 </div>
