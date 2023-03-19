@@ -9,7 +9,7 @@ ul{
     bottom: 0;
     right: 0;
     left: 0;
-    /* background-color: rgb(216, 215, 215); */
+    /* background-color: rgb(2, 94, 11); */
     background-color: #f8f9fa;
     
 }
@@ -25,3 +25,27 @@ ul{
 p{
     margin-top: 20px;
 }
+
+/*  */
+/* ul{
+    margin: 0;
+    padding: 0;
+}
+.footer {
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: #fff;
+}
+.footer ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+}
+.footer ul li a{
+    color: blueviolet;
+    text-decoration: none;
+} */

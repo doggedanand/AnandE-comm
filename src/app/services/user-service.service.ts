@@ -1,5 +1,5 @@
 import { HttpClient } from '@angular/common/http';
-import { Injectable } from '@angular/core';
+import { EventEmitter, Injectable } from '@angular/core';
 import { Router } from '@angular/router';
 import { ISellerAuth, sellerLogin } from '../interface/iseller-auth';
 
@@ -8,7 +8,10 @@ import { ISellerAuth, sellerLogin } from '../interface/iseller-auth';
 })
 export class UserServiceService {
 
-  constructor(private http: HttpClient, private route: Router) { }
+  constructor(private http: HttpClient, private route: Router) {
+    
+   }
+  invalidUserAuthError = new EventEmitter<boolean>(false);
   userSignUp(user: ISellerAuth) {
     // console.warn(user);
     this.http.post("http://localhost:3000/users", user, { observe: 'response' }).subscribe((result) => {
@@ -23,10 +26,13 @@ export class UserServiceService {
   userLogin(data: sellerLogin) {
     this.http.get<ISellerAuth[]>(`http://localhost:3000/users?email=${data.email}&password=${data.password}`,
       { observe: 'response' }).subscribe((result) => {
-        if (result && result.body) {
+        if (result && result.body?.length) {
+          this.invalidUserAuthError.emit(false);
           // console.warn(result);
           localStorage.setItem('user', JSON.stringify(result.body[0]));
           this.route.navigate(['/']);
+        } else {
+          this.invalidUserAuthError.emit(true);
         }
       })
   }

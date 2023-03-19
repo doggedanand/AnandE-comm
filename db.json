@@ -21,7 +21,7 @@
   ],
   "products": [
     {
-      "name": "i Phone 14 pro max",
+      "name": "I Phone 14 Pro max",
       "price": "160000",
       "color": "Black",
       "category": "Apple Brand",
@@ -117,6 +117,44 @@
       "email": "anand@user.com",
       "password": "Anand@123",
       "id": 1
+    }
+  ],
+  "cart": [
+    {
+      "name": "I Phone 14 Pro max",
+      "price": "160000",
+      "color": "Black",
+      "category": "Apple Brand",
+      "description": "This is manufactured by Apple.",
+      "image": "https://shop.du.ae/medias/sys_master/images/images/h43/h4a/9037764296734/iPhone-14-Pro-Max-Deep-Purple.jpg",
+      "quantity": 1,
+      "productId": 3,
+      "userId": null,
+      "id": 1
+    },
+    {
+      "name": "One Plus 9 Pro",
+      "price": "19999",
+      "color": "Silver",
+      "category": "Phone",
+      "description": "This is Manufactured by Oneplus.",
+      "image": "https://cdn.wccftech.com/wp-content/uploads/2020/06/OnePlus-9-Pro.jpg",
+      "quantity": 1,
+      "productId": 5,
+      "userId": null,
+      "id": 2
+    },
+    {
+      "name": "Nothing Phone 1",
+      "price": "26999",
+      "color": "Black",
+      "category": "Phone",
+      "description": "This is manufactured by Nothing. (New Brand)",
+      "image": "https://techarena24.com/wp-content/uploads/2022/06/Nothig-Phone-_1.jpeg.webp",
+      "quantity": 1,
+      "productId": 6,
+      "userId": null,
+      "id": 3
     }
   ]
 }

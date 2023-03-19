@@ -43,7 +43,7 @@
     border: 1px solid rgb(253, 3, 190);
     height: 39px;
     width: 18cm;
-    border-radius: 0px;
+    border-radius: 50px 5px 5px 50px;
 
 }
 
@@ -54,6 +54,7 @@
     border-left: 0px;
     margin-top: 5px;
     cursor: pointer;
+    border-radius: 5px 50px 50px 5px;;
     /* flex: 1; */
     /* display: flex; */
     /* margin-left: 5%;

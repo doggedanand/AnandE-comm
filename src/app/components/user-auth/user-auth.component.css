@@ -4,3 +4,6 @@
     margin-top: 80px;
     color: rgb(253, 3, 190);
 }
+button:disabled{
+    cursor: not-allowed;
+}

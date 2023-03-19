@@ -18,4 +18,17 @@ export interface productListAdd{
     description:string;
     image:string;
     id:number;
+    quantity:undefined|number;
 }
+export interface cart{
+    name:string;
+    price:string; 
+    category:string;
+    color:string;
+    description:string;
+    image:string;
+    id:number|undefined;
+    quantity:undefined|number;
+    productId:number,
+    userId:number
+  }

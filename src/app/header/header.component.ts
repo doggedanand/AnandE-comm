@@ -12,6 +12,7 @@ export class HeaderComponent implements OnInit {
   sellerName: string = '';
   searchResult: undefined | productListAdd[];
   userName: string = "";
+  cartItem = 0;
   constructor(public route: Router, private product: SellerAddProductService) { }
 
   ngOnInit(): void {
@@ -37,12 +38,20 @@ export class HeaderComponent implements OnInit {
         // } 
       }
     });
+    let cartData = localStorage.getItem('localCart');
+    if (cartData) {
+      this.cartItem = JSON.parse(cartData).length
+    }
+    // for cart refresh 
+    this.product.cartData.subscribe((items)=>{
+      this.cartItem=items.length
+    })
   }
   logout() {
     localStorage.removeItem('seller');
     this.route.navigate(['/'])
   }
-  userLogout(){
+  userLogout() {
     // this.logout();
     localStorage.removeItem('user');
     this.route.navigate(['/user-auth'])
