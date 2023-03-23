@@ -57,7 +57,7 @@
       "id": 7
     },
     {
-      "name": "Hp monitor 27 f",
+      "name": "Hp monitor 27 F",
       "price": "27999",
       "color": "Silver",
       "category": "Monitor",
@@ -121,30 +121,6 @@
   ],
   "cart": [
     {
-      "name": "I Phone 14 Pro max",
-      "price": "160000",
-      "color": "Black",
-      "category": "Apple Brand",
-      "description": "This is manufactured by Apple.",
-      "image": "https://shop.du.ae/medias/sys_master/images/images/h43/h4a/9037764296734/iPhone-14-Pro-Max-Deep-Purple.jpg",
-      "quantity": 1,
-      "productId": 3,
-      "userId": null,
-      "id": 1
-    },
-    {
-      "name": "One Plus 9 Pro",
-      "price": "19999",
-      "color": "Silver",
-      "category": "Phone",
-      "description": "This is Manufactured by Oneplus.",
-      "image": "https://cdn.wccftech.com/wp-content/uploads/2020/06/OnePlus-9-Pro.jpg",
-      "quantity": 1,
-      "productId": 5,
-      "userId": null,
-      "id": 2
-    },
-    {
       "name": "Nothing Phone 1",
       "price": "26999",
       "color": "Black",
@@ -153,8 +129,44 @@
       "image": "https://techarena24.com/wp-content/uploads/2022/06/Nothig-Phone-_1.jpeg.webp",
       "quantity": 1,
       "productId": 6,
-      "userId": null,
+      "userId": 1,
       "id": 3
+    },
+    {
+      "name": "I Phone 14 Pro max",
+      "price": "160000",
+      "color": "Black",
+      "category": "Apple Brand",
+      "description": "This is manufactured by Apple.",
+      "image": "https://shop.du.ae/medias/sys_master/images/images/h43/h4a/9037764296734/iPhone-14-Pro-Max-Deep-Purple.jpg",
+      "quantity": 1,
+      "productId": 3,
+      "userId": 1,
+      "id": 4
+    },
+    {
+      "name": "I Phone 14 Pro max",
+      "price": "160000",
+      "color": "Black",
+      "category": "Apple Brand",
+      "description": "This is manufactured by Apple.",
+      "image": "https://shop.du.ae/medias/sys_master/images/images/h43/h4a/9037764296734/iPhone-14-Pro-Max-Deep-Purple.jpg",
+      "quantity": 1,
+      "productId": 3,
+      "userId": 1,
+      "id": 5
+    },
+    {
+      "name": "Truck",
+      "price": "999",
+      "color": "Red",
+      "category": "Toys",
+      "description": "A toy for 5 year old child",
+      "image": "https://cdn.shopify.com/s/files/1/0011/8367/8476/products/Truck2_1400x.png?v=1662789388",
+      "quantity": 1,
+      "productId": 1,
+      "userId": 1,
+      "id": 6
     }
   ]
 }

@@ -2,8 +2,8 @@
     display: flex;
     /* justify-content: space-evenly;  */
     justify-content: space-evenly;
-    /* background-color: rgb(216, 215, 215); */
-    background-color: #f8f9fa;
+    background-color: rgb(216, 215, 215);
+    /* background-color: #f8f9fa; */
     width: auto;
     padding-top: 5px;
     padding-bottom: 15px;
@@ -69,6 +69,7 @@
     width: 300px;
     top: 47px;
     border: 1px solid rgb(216, 216, 216);
+    /* border-radius: 50px 5px 5px 50px; */
 }
 .suggested-result li {
     padding: 5px;

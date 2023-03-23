@@ -26,7 +26,7 @@ export class SellerAuthComponent implements OnInit {
     this.seller.userLogin(data);
     this.seller.isLoginError.subscribe((isError) => {
       if (isError) {
-        this.authError = "Email or Password is not correct"
+        this.authError = "Email or Password is incorrect"
       }
     })
   }
