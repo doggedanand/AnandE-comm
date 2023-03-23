@@ -121,40 +121,16 @@
   ],
   "cart": [
     {
-      "name": "Nothing Phone 1",
-      "price": "26999",
-      "color": "Black",
-      "category": "Phone",
-      "description": "This is manufactured by Nothing. (New Brand)",
-      "image": "https://techarena24.com/wp-content/uploads/2022/06/Nothig-Phone-_1.jpeg.webp",
-      "quantity": 1,
-      "productId": 6,
+      "name": "Truck",
+      "price": "999",
+      "color": "Red",
+      "category": "Toys",
+      "description": "A toy for 5 year old child",
+      "image": "https://cdn.shopify.com/s/files/1/0011/8367/8476/products/Truck2_1400x.png?v=1662789388",
+      "quantity": 10,
+      "productId": 1,
       "userId": 1,
-      "id": 3
-    },
-    {
-      "name": "Dell Inspiron 15 3000",
-      "price": "465000",
-      "color": "Black",
-      "category": "Laptop",
-      "description": "This is manufactured by Dell.",
-      "image": "https://pisces.bbystatic.com/image2/BestBuy_US/images/products/6381/6381715_sd.jpg",
-      "quantity": 1,
-      "productId": 7,
-      "userId": 1,
-      "id": 6
-    },
-    {
-      "name": "I Phone 14 Pro max",
-      "price": "160000",
-      "color": "Black",
-      "category": "Apple Brand",
-      "description": "This is manufactured by Apple.",
-      "image": "https://shop.du.ae/medias/sys_master/images/images/h43/h4a/9037764296734/iPhone-14-Pro-Max-Deep-Purple.jpg",
-      "quantity": 1,
-      "productId": 3,
-      "userId": 1,
-      "id": 7
+      "id": 1
     }
   ]
 }

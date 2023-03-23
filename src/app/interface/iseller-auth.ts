@@ -23,6 +23,7 @@ export interface productListAdd{
 }
 export interface cart{
     name:string;
+    // there is an issues here in price 
     price:string; 
     category:string;
     color:string;

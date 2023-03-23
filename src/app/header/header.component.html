@@ -1,40 +1,58 @@
 <nav class="nav">
-    <h1><a [routerLink]="['/']"><strong>Anand</strong>E-Comm</a></h1>
-    <div *ngIf="menuType==='default'" class="nav-search">
-        <input #searchInput (keyup)="searchProduct($event)" (blur)="hideSearch()" type="text" placeholder="Search here">
-        <button (click)="submitSearch(searchInput.value)">Search</button>
-        <ul *ngIf="searchResult" class="suggested-result">
-            <li *ngFor="let item of searchResult">
-                <a (mousedown)="redirectToDetails(item.id)">{{item.name}}</a>
-            </li>
-        </ul>
-    </div>
-    <div [ngSwitch]="menuType">
-        <!-- default  -->
-        <ul *ngSwitchCase="'default'">
-            <li> <a [routerLink]="['seller-auth']">Seller</a> </li>
-            <li> <a [routerLink]="['']">Home</a> </li>
-            <li> <a [routerLink]="['user-auth']">Login/SignUp</a> </li>
-            <li> <a [routerLink]="['']">Cart({{cartItem}})</a> </li>
-        </ul>
-        <!-- user  -->
-        <ul *ngSwitchCase="'user'">
-            <!-- <li> <a [routerLink]="['seller-auth']">Seller</a> </li> -->
-            <li> <a [routerLink]="['']">Home</a> </li>
-            <li> <a (click)="userLogout()">Logout</a> </li>
-            <li> <a [routerLink]="['user-auth']">{{"Hi!"}} {{userName | titlecase}}</a> </li>
-            <li> <a [routerLink]="['cart-page']">Cart({{cartItem}})</a> </li>
-        </ul>
-        <!-- seller  -->
-        <ul *ngSwitchCase="'seller'">
-            <li> <a [routerLink]="['seller-auth']">Product List</a> </li>
-            <li> <a [routerLink]="['seller-add-product']">Add Product</a></li>
-            <li> <a (click)="logout()">Logout</a> </li>
-            <li> <a [routerLink]="['']">{{"Hi!" }} {{sellerName | titlecase}}</a> </li>
-        </ul>
-    </div>
-    <!-- nav end -->
-    <!-- <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+  <h1>
+    <a [routerLink]="['/']"><strong>Anand</strong>E-Comm</a>
+  </h1>
+  <div *ngIf="menuType === 'default'" class="nav-search">
+    <input
+      #searchInput
+      (keyup)="searchProduct($event)"
+      (blur)="hideSearch()"
+      type="text"
+      placeholder="Search here"
+    />
+    <button (click)="submitSearch(searchInput.value)">Search</button>
+    <ul *ngIf="searchResult" class="suggested-result">
+      <li *ngFor="let item of searchResult">
+        <a (mousedown)="redirectToDetails(item.id)">{{ item.name }}</a>
+      </li>
+    </ul>
+  </div>
+  <div [ngSwitch]="menuType">
+    <!-- default  -->
+    <ul *ngSwitchCase="'default'">
+      <li><a [routerLink]="['seller-auth']">Seller</a></li>
+      <li><a [routerLink]="['']">Home</a></li>
+      <li><a [routerLink]="['user-auth']">Login/SignUp</a></li>
+      <li>
+        <a [routerLink]="['']">Cart({{ cartItem }})</a>
+      </li>
+    </ul>
+    <!-- user  -->
+    <ul *ngSwitchCase="'user'">
+      <!-- <li> <a [routerLink]="['seller-auth']">Seller</a> </li> -->
+      <li><a [routerLink]="['']">Home</a></li>
+      <li><a (click)="userLogout()">Logout</a></li>
+      <li>
+        <a [routerLink]="['user-auth']"
+          >{{ "Hi!" }} {{ userName | titlecase }}</a
+        >
+      </li>
+      <li>
+        <a [routerLink]="['cart-page']">Cart({{ cartItem }})</a>
+      </li>
+    </ul>
+    <!-- seller  -->
+    <ul *ngSwitchCase="'seller'">
+      <li><a [routerLink]="['seller-auth']">Product List</a></li>
+      <li><a [routerLink]="['seller-add-product']">Add Product</a></li>
+      <li><a (click)="logout()">Logout</a></li>
+      <li>
+        <a [routerLink]="['']">{{ "Hi!" }} {{ sellerName | titlecase }}</a>
+      </li>
+    </ul>
+  </div>
+  <!-- nav end -->
+  <!-- <div class="btn-group" role="group" aria-label="Basic mixed styles example">
         <button type="button" class="btn btn-danger">Left</button>
         <button type="button" class="btn btn-warning">Middle</button>
         <button type="button" class="btn btn-success">Right</button>
