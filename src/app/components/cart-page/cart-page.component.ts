@@ -18,9 +18,13 @@ export class CartPageComponent implements OnInit {
     total: 0,
   };
 
-  constructor(private product: SellerAddProductService, private router:Router) { }
+  constructor(private product: SellerAddProductService, private router: Router) { }
 
   ngOnInit(): void {
+    this.loadDetails();
+  }
+
+  loadDetails() {
     this.product.currentCart().subscribe((result) => {
       this.cartData = result;
       // console.warn(result);
@@ -37,11 +41,21 @@ export class CartPageComponent implements OnInit {
       this.priceSummary.total = price + (price / 10) + 100 - (price / 10)
       console.warn(this.priceSummary);
 
+      if(!this.cartData.length){
+
+        this.router.navigate(['/'])
+      }
+
       // console.warn(price);
 
     });
   }
-  checkout(){
+  checkout() {
     this.router.navigate(['/checkout']);
+  }
+  removeToCart(cartId: number | undefined) {
+    cartId && this.cartData && this.product.removeToCart(cartId).subscribe((result) => {
+      this.loadDetails();
+    })
   }
 }

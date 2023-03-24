@@ -16,7 +16,7 @@
           <span>Quantity: {{ item.quantity }}</span>
         </li>
         <li>
-          <button class="btn btn-danger">Remove to Cart</button>
+          <button class="btn btn-danger" (click)="removeToCart(item.id)">Remove to Cart</button>
         </li>
       </ul>
     </div>

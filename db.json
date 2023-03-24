@@ -119,28 +119,15 @@
       "id": 1
     }
   ],
-  "cart": [
-    {
-      "name": "Truck",
-      "price": "999",
-      "color": "Red",
-      "category": "Toys",
-      "description": "A toy for 5 year old child",
-      "image": "https://cdn.shopify.com/s/files/1/0011/8367/8476/products/Truck2_1400x.png?v=1662789388",
-      "quantity": 10,
-      "productId": 1,
-      "userId": 1,
-      "id": 1
-    }
-  ],
+  "cart": [],
   "orders": [
     {
-      "email": "jjj",
-      "address": "jjj",
-      "contact": "jjj",
+      "email": "hh",
+      "address": "hh",
+      "contact": "hh",
       "totalPrice": 10090,
       "userId": 1,
-      "id": 1
+      "id": 2
     }
   ]
 }

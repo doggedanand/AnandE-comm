@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { order } from 'src/app/interface/iseller-auth';
+import { cart, order } from 'src/app/interface/iseller-auth';
 import { SellerAddProductService } from 'src/app/services/seller-add-product.service';
 
 @Component({
@@ -9,12 +9,15 @@ import { SellerAddProductService } from 'src/app/services/seller-add-product.ser
   styleUrls: ['./checkout.component.css']
 })
 export class CheckoutComponent implements OnInit {
-  totalPrice: number | undefined
+  totalPrice: number | undefined;
+  cartData:cart[]|undefined;
+  orderMsg:string|undefined;
   constructor(private product: SellerAddProductService,private router:Router) { }
 
   ngOnInit(): void {
     this.product.currentCart().subscribe((result) => {
       let price = 0;
+      this.cartData=result;
       result.forEach((item) => {
         if (item.quantity) {
           price = price + (+item.price * item.quantity)
@@ -34,12 +37,23 @@ export class CheckoutComponent implements OnInit {
       let orderData:order = {
         ...data,
         totalPrice: this.totalPrice,
-        userId
+        userId,
+        id:undefined
       }
+      this.cartData?.forEach((item)=>{
+      setTimeout(() => {
+        item.id &&  this.product.deleteCartItems(item.id)
+      }, 800);
+      })
+
       this.product.orderNow(orderData).subscribe((result)=>{
         if(result){
-          alert('order placed')
-          this.router.navigate(['/orders'])
+          // alert('order placed')
+          this.orderMsg='Your order has been placed'
+          setTimeout(() => {
+            this.router.navigate(['/orders'])
+            this.orderMsg=undefined;
+          }, 4000);
         }
       })
     }
