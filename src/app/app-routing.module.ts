@@ -2,7 +2,9 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { SellerAuthGuard } from './auth-guard/seller-auth.guard';
 import { CartPageComponent } from './components/cart-page/cart-page.component';
+import { CheckoutComponent } from './components/checkout/checkout.component';
 import { HomeComponent } from './components/home/home.component';
+import { MyOrdersComponent } from './components/my-orders/my-orders.component';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
 import { SearchComponent } from './components/search/search.component';
 import { SellerAddProductComponent } from './components/seller-add-product/seller-add-product.component';
@@ -20,7 +22,9 @@ const routes: Routes = [
   { path: 'search/:query', component: SearchComponent },
   { path: 'details/:productId', component: ProductDetailsComponent },
   { path: 'user-auth', component: UserAuthComponent },
-  { path: 'cart-page', component: CartPageComponent }
+  { path: 'cart-page', component: CartPageComponent },
+  { path: 'checkout', component: CheckoutComponent },
+  { path: 'orders', component: MyOrdersComponent }
 ];
 
 @NgModule({

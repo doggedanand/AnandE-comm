@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { cart, priceSummary } from 'src/app/interface/iseller-auth';
 import { SellerAddProductService } from 'src/app/services/seller-add-product.service';
 
@@ -17,7 +18,7 @@ export class CartPageComponent implements OnInit {
     total: 0,
   };
 
-  constructor(private product: SellerAddProductService) { }
+  constructor(private product: SellerAddProductService, private router:Router) { }
 
   ngOnInit(): void {
     this.product.currentCart().subscribe((result) => {
@@ -39,5 +40,8 @@ export class CartPageComponent implements OnInit {
       // console.warn(price);
 
     });
+  }
+  checkout(){
+    this.router.navigate(['/checkout']);
   }
 }

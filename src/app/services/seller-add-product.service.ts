@@ -1,6 +1,6 @@
 import { HttpClient } from '@angular/common/http';
 import { EventEmitter, Injectable } from '@angular/core';
-import { cart, productListAdd } from '../interface/iseller-auth';
+import { cart, order, productListAdd } from '../interface/iseller-auth';
 
 @Injectable({
   providedIn: 'root'
@@ -76,6 +76,13 @@ export class SellerAddProductService {
     let userStore = localStorage.getItem('user');
     let userData = userStore && JSON.parse(userStore);
     return this.http.get<cart[]>('http://localhost:3000/cart/?userId=' + userData.id);
+  }
+  orderNow(data: order) {
+    return this.http.post('http://localhost:3000/orders', data)
+  }
+  orderList() {
+
+    return this.http.get('http://localhost:3000/orders', )
   }
 
 }
