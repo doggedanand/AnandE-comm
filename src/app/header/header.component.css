@@ -1,13 +1,13 @@
 .nav {
     display: flex;
     /* justify-content: space-evenly;  */
-    justify-content: space-evenly;
-    background-color: rgb(216, 215, 215);
-    /* background-color: #f8f9fa; */
+    justify-content: space-around;
+    /* background-color: rgb(216, 215, 215); */
+    background-color: #f8f9fa;
     width: auto;
     padding-top: 5px;
     padding-bottom: 15px;
-    /* position: fixed; */
+    position:inherit;
     /* overflow: hidden; */
 }
 
@@ -34,6 +34,13 @@
 .nav li a {
     text-decoration: none;
     color: rgb(253, 3, 190);
+    cursor: pointer;
+}
+.nav li a:hover {
+    /* background-color: black; */
+    color: blue;
+    text-decoration: none;
+    /* color: rgb(253, 3, 190); */
     cursor: pointer;
 }
 

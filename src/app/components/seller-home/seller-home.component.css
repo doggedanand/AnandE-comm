@@ -1,7 +1,9 @@
 .product-list {
     text-align: center;
     color: rgb(253, 3, 190);
-    margin-bottom: 30px;
+    margin-bottom: 150px;
+    margin-top: 50px;
+    /* margin: 500px; */
 }
 .center {
     margin-left: auto;

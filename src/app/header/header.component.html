@@ -1,15 +1,9 @@
-<nav class="nav">
+<nav class="nav shadow-sm">
   <h1>
     <a [routerLink]="['/']"><strong>Anand</strong>E-Comm</a>
   </h1>
   <div *ngIf="menuType === 'default'|| menuType==='user'" class="nav-search">
-    <input
-      #searchInput
-      (keyup)="searchProduct($event)"
-      (blur)="hideSearch()"
-      type="text"
-      placeholder="Search here"
-    />
+    <input #searchInput (keyup)="searchProduct($event)" (blur)="hideSearch()" type="text" placeholder="Search here" />
     <button (click)="submitSearch(searchInput.value)">Search</button>
     <ul *ngIf="searchResult" class="suggested-result">
       <li *ngFor="let item of searchResult">
@@ -34,9 +28,7 @@
       <li><a [routerLink]="['orders']">My Orders</a></li>
       <li><a (click)="userLogout()">Logout</a></li>
       <li>
-        <a [routerLink]="['user-auth']"
-          >{{ "Hi!" }} {{ userName | titlecase }}</a
-        >
+        <a [routerLink]="['user-auth']">{{ "Hi!" }} {{ userName | titlecase }}</a>
       </li>
       <li>
         <a [routerLink]="['cart-page']">Cart({{ cartItem }})</a>
